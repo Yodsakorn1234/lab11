@@ -1,7 +1,6 @@
 #include<iostream>
 using namespace std;
-
-int fibonacci(int x);
+int fibonacci(int );
 
 int main(){
     int x;
@@ -9,16 +8,10 @@ int main(){
     cout << fibonacci(x);
     return 0; 
 }
-
 int fibonacci(int x){
-    int sum = 0;
-    if(x == 0){
-        return sum;
-    }else if(x == 1){
-        sum = 1;
-        return sum;
+    if(x<=1){
+        return x;
     }else{
-        sum = sum + fibonacci(x-1) + fibonacci(x-2);
-        return sum;
+        return fibonacci(x-1)+fibonacci(x-2);
     }
 }
